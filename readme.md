@@ -1,4 +1,4 @@
-# example menubar app
+# example app
 
 ## instructions
 

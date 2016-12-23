@@ -6,6 +6,7 @@
 	<title>ahmet</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="node_modules\flag-icon-css\css\flag-icon.min.css">
+	<link rel="stylesheet" href="app\main.css">
 
 	<script>
 		if (typeof module === 'object') {
@@ -25,43 +26,6 @@
 
 	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
-
-<style>
-	body {
-		background-color: #4C6A92;
-		color: #fff;
-		overflow-x: hidden;
-	}
-
-	button {
-		-webkit-app-region: no-drag;
-	}
-
-	.header {
-		margin-left: 10px;
-	}
-
-	.container {
-		background-color: #fff;
-		color: #4C6A92;
-	}
-
-	.close {
-		margin-top: 5px;
-		margin-right: 10px;
-		color: #fff;
-	}
-
-	.close:hover {
-		color: #fff !important;
-	}
-
-	.divider {
-		margin-top: 10px;
-		margin-bottom: 10px;
-		border-top: 2px solid #4C6A92;
-	}
-</style>
 
 <body style="-webkit-app-region: drag">
 	<button type="button" class="close">&times;</button>
@@ -95,52 +59,5 @@
 	</div>
 
 </body>
-
-<script>
-	$(document).ready(function() {
-		moment.locale('tr');
-		$('#today').text();
-		$('#today').text(moment().format('LLLL'));
-
-		axios.get('http://api.fixer.io/latest?base=USD')
-			.then(function(response) {
-				$('#ustl').text();
-				$('#ustl').text((response.data.rates.TRY).toFixed(3));
-			})
-			.catch(function(error) {
-				console.log(error);
-			});
-
-		axios.get('http://api.fixer.io/latest?base=EUR')
-			.then(function(response) {
-				$('#eutl').text();
-				$('#eutl').text((response.data.rates.TRY).toFixed(3));
-			})
-			.catch(function(error) {
-				console.log(error);
-			});
-
-		/*
-		axios.get('https://newsapi.org/v1/articles?source=bloomberg&category=business&apiKey=170acfbecb234dc78fdd82b28c52e944')
-			.then(function (response) {
-			$('.news').html();
-			$.each(response.data.articles, function(i, item) {
-				$('.news').append('<li>' + item.title + '</li>');
-			})
-		})
-			.catch(function (error) {
-				console.log(error);
-		});
-		*/
-	});
-
-
-	$('button.close').click(function() {
-		window.close();
-	});
-
-	// You can also require other files to run in this process
-	//require('./renderer.js')
-</script>
-
+<script src="app\app.js"></script>
 </html>

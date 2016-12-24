@@ -25,13 +25,13 @@ $(document).ready(function() {
 $("#toDollar").keyup(function(event) {
 	var dollarRate = parseFloat($('#ustl').text()),
 		turkLira = $("#toDollar").val();
-	$('#dollarResult span').text((turkLira * dollarRate).toFixed(2));
+	$('#dollarResult span').text((turkLira / dollarRate).toFixed(2));
 });
 
 $("#toEuro").keyup(function(event) {
 	var euroRate = parseFloat($('#eutl').text()),
 		turkLira = $("#toEuro").val();
-	$('#euroResult span').text((turkLira * euroRate).toFixed(2));
+	$('#euroResult span').text((turkLira / euroRate).toFixed(2));
 });
 
 

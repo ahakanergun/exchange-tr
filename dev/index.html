@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>ahmet</title>
+	<title>exchange-tr</title>
 
 	<!-- CSS Files -->
 
@@ -45,24 +45,47 @@
 		    	<h2 id="today"></h2>
 	  		</div>
 			<div class="col-md-12">
-				<div class="col-xs-6">
-					<div class="card card-primary text-xs-center">
-						<div class="card-block">
-							<h4 class="card-title white-text">USD / TL</h4>
-							<h2 class="card-text white-text" id="ustl"></h2>
+				<div class="col-xs-4">
+					<div id="dollarRateBox">
+						<div class="card-block usDefaultBlock">
+							<h4 class="card-title">USD</h4>
+							<h2 class="card-text" id="ustl"></h2>
+						</div>
+						<div class="card-block usSellBuyBlock">
+							<p class="card-title">ALIŞ / SATIŞ</p>
+							<p class="card-text" id="usSellBuy"></p>
+						</div>
+						<div class="success-border">
+					    </div>
+					</div>
+				</div>
+				<div class="col-xs-4">
+					<div id="euroRateBox">
+						<div class="card-block euDefaultBlock">
+							<h4 class="card-title">EURO</h4>
+							<h2 class="card-text" id="eutl"></p>
+						</div>
+						<div class="card-block euSellBuyBlock">
+							<h4 class="card-title">ALIŞ / SATIŞ</h4>
+							<h2 class="card-text" id="euSellBuy"></h2>
 						</div>
 					</div>
 				</div>
-				<div class="col-xs-6">
-					<div class="card card-primary text-xs-center">
-						<div class="card-block">
-							<h4 class="card-title white-text">EURO / TL</h4>
-							<h2 class="card-text white-text" id="eutl"></p>
+				<div class="col-xs-4">
+					<div id="goldRateBox">
+						<div class="card-block alDefaultBlock">
+							<h4 class="card-title">ALTIN</h4>
+							<h2 class="card-text" id="altl"></p>
+						</div>
+						<div class="card-block alSellBuyBlock">
+							<h4 class="card-title">ALIŞ / SATIŞ</h4>
+							<h2 class="card-text" id="alSellBuy"></h2>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-md-12">
+
+			<div class="col-md-12 dollarConverter">
 				<div class="col-xs-6">
 					<div class="md-form input-group">
 						<i class="fa fa-try prefix p-t-10"></i>

@@ -29,6 +29,53 @@ button {
 	padding-top: 10px;
 }
 
+.my-group .form-control{
+    width:50%;
+}
+
+.card-border-success {
+	border: 1px solid #00C851;
+	border-bottom: 5px solid #00C851;
+}
+
+.card-border-danger {
+	border: 1px solid #CC0000;
+	border-bottom: 5px solid #CC0000;
+}
+
+.card-border-warning {
+	border: 1px solid #ffbb33;
+	border-bottom: 5px solid #ffbb33;
+}
+
+.card {
+	cursor: pointer;
+}
+
+.card-block {
+	min-height: 105px
+}
+
+.card-text {
+	font-weight: 600;
+}
+
+.usSellBuyBlock {
+ display: none;
+}
+
+.euSellBuyBlock {
+ display: none;
+}
+
+.alSellBuyBlock {
+ display: none;
+}
+
+.dollarConverter {
+	display: none;
+}
+
 .close {
 	/*margin-top: 5px;*/
 	margin-right: 10px;

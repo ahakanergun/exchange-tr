@@ -1,6 +1,6 @@
 {
   "name": "exchange-tr",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "exchange-tr is a menubar electron app for exchange rate convert",
   "repository": {
     "type": "git",

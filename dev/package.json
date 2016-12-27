@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "menubar": "*",
-    "mdbootstrap": "*"
+    "bootstrap": "*"
   },
   "devDependencies": {
     "electron-packager": "^5.2.1",

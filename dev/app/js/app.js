@@ -18,8 +18,10 @@ $(document).ready(function() {
 			.then(function(response) {
 				$('#ustl').text();
 				$('#ustl').text((response.data.selling).toFixed(4));
-				$('#usSellBuy').text();
-				$('#usSellBuy').text((response.data.buying).toFixed(4) + ' / ' + (response.data.selling).toFixed(4));
+				$('#usSell').text();
+				$('#usBuy').text();
+				$('#usSell').text((response.data.selling).toFixed(4));
+				$('#usBuy').text((response.data.buying).toFixed(4));
 				$('#dollarRateBox').removeClass();
 				if (response.data.change_rate < 0) {
 					$('#dollarRateBox').addClass("card card-border-danger text-xs-center");
@@ -64,6 +66,21 @@ $(document).ready(function() {
 			.catch(function(error) {
 				console.log(error);
 			});
+
+			axios.get('http://www.doviz.com/api/v1/indexes/XU100/latest')
+				.then(function(response) {
+					$('#bist').text();
+					$('#bist').text(parseInt(response.data.latest));
+					$('#bistRateBox').removeClass();
+					if (response.data.change_rate < 0) {
+						$('#bistRateBox').addClass("card card-border-danger text-xs-center");
+					} else {
+						$('#bistRateBox').addClass("card card-border-success text-xs-center");
+					}
+				})
+				.catch(function(error) {
+					console.log(error);
+				});
 	}
 	setInterval(getCurrencyData, 60000);
 });
@@ -93,14 +110,10 @@ $("#euroToLira").keyup(function(event) {
 });
 
 $("#dollarRateBox").click(function() {
-	if ($('.usSellBuyBlock').css('display') == 'none') {
-		$(".usSellBuyBlock").show();
+	if ($('.dollarConverter').css('display') == 'none') {
 		$(".dollarConverter").show();
-		$(".usDefaultBlock").hide();
 	} else {
-		$(".usSellBuyBlock").hide();
 		$(".dollarConverter").hide();
-		$(".usDefaultBlock").show();
 	}
 });
 

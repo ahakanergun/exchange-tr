@@ -42,86 +42,86 @@
 	<div class="row">
 		<div class="container">
 			<div class="page-header">
-		    	<h2 id="today"></h2>
-	  		</div>
+		    	<h4 id="today"></h4>
+  		</div>
 			<div class="col-md-12">
-				<div class="col-xs-4">
+				<div class="col-xs-3">
 					<div id="dollarRateBox">
-						<div class="card-block usDefaultBlock">
+						<div class="card-block">
 							<h4 class="card-title">USD</h4>
-							<h2 class="card-text" id="ustl"></h2>
-						</div>
-						<div class="card-block usSellBuyBlock">
-							<p class="card-title">ALIŞ / SATIŞ</p>
-							<p class="card-text" id="usSellBuy"></p>
+							<h4 class="card-text" id="ustl"></h4>
 						</div>
 						<div class="success-border">
 					    </div>
 					</div>
 				</div>
-				<div class="col-xs-4">
+				<div class="col-xs-3">
 					<div id="euroRateBox">
-						<div class="card-block euDefaultBlock">
+						<div class="card-block">
 							<h4 class="card-title">EURO</h4>
-							<h2 class="card-text" id="eutl"></p>
-						</div>
-						<div class="card-block euSellBuyBlock">
-							<h4 class="card-title">ALIŞ / SATIŞ</h4>
-							<h2 class="card-text" id="euSellBuy"></h2>
+							<h4 class="card-text" id="eutl"></h4>
 						</div>
 					</div>
 				</div>
-				<div class="col-xs-4">
+				<div class="col-xs-3">
 					<div id="goldRateBox">
-						<div class="card-block alDefaultBlock">
+						<div class="card-block">
 							<h4 class="card-title">ALTIN</h4>
-							<h2 class="card-text" id="altl"></p>
+							<h4 class="card-text" id="altl"></h4>
 						</div>
-						<div class="card-block alSellBuyBlock">
-							<h4 class="card-title">ALIŞ / SATIŞ</h4>
-							<h2 class="card-text" id="alSellBuy"></h2>
+					</div>
+				</div>
+				<div class="col-xs-3">
+					<div id="bistRateBox">
+						<div class="card-block">
+							<h4 class="card-title">BİST</h4>
+							<h4 class="card-text" id="bist"></h4>
 						</div>
 					</div>
 				</div>
 			</div>
 
 			<div class="col-md-12 dollarConverter">
+
 				<div class="col-xs-6">
+					<h4>ALIŞ: <span id="usSell"></span></h4>
 					<div class="md-form input-group">
 						<i class="fa fa-try prefix p-t-10"></i>
-					    <input id="toDollar" type="number" class="form-control" placeholder="Türk Lirası">
-					    <span class="input-group-addon btn-default white-text" id="dollarResult"><span></span> USD ($)</span>
+					    <input id="toDollarSell" type="number" class="form-control" placeholder="Türk Lirası">
+					    <span class="input-group-addon btn-default white-text" id="dollarSellResult"><span></span> USD ($)</span>
 					</div>
 				</div>
 				<div class="col-xs-6">
+					<h4>SATIŞ: <span id="usBuy"></span></h4>
 					<div class="md-form input-group">
 						<i class="fa fa-try prefix p-t-10"></i>
-					    <input id="toEuro" type="number" class="form-control" placeholder="Türk Lirası">
-					    <span class="input-group-addon btn-default white-text" id="euroResult"><span></span> EUR (€)</span>
+					    <input id="toDollarBuy" type="number" class="form-control" placeholder="Türk Lirası">
+					    <span class="input-group-addon btn-default white-text" id="dollarBuyResult"><span></span> USD (€)</span>
 					</div>
 				</div>
-			</div>
-			<div class="col-md-12">
 				<div class="col-xs-6">
 					<div class="md-form input-group">
 						<i class="fa fa-usd prefix p-t-10"></i>
-					    <input id="dollarToLira" type="number" class="form-control" placeholder="Amerikan Doları">
-					    <span class="input-group-addon btn-default white-text" id="dollarToLiraResult"><span></span> TL (₺)</span>
+					    <input id="dollarToLiraSell" type="number" class="form-control" placeholder="Amerikan Doları">
+					    <span class="input-group-addon btn-default white-text" id="dollarToLiraSellResult"><span></span> TL (₺)</span>
 					</div>
 				</div>
 				<div class="col-xs-6">
 					<div class="md-form input-group">
-						<i class="fa fa-eur prefix p-t-10"></i>
-					    <input id="euroToLira" type="number" class="form-control" placeholder="Euro">
-					    <span class="input-group-addon btn-default white-text" id="euroToLiraResult"><span></span> TL (₺)</span>
+						<i class="fa fa-usd prefix p-t-10"></i>
+					    <input id="dollarToLiraBuy" type="number" class="form-control" placeholder="Amerikan Doları">
+					    <span class="input-group-addon btn-default white-text" id="dollarToLiraBuyResult"><span></span> TL (₺)</span>
 					</div>
 				</div>
 			</div>
+
+
+
 		</div>
 	</div>
 
 	<!--Footer-->
-	<footer class="page-footer blue center-on-small-only">
+	<footer class="navbar-fixed-bottom page-footer blue-grey center-on-small-only">
 
 	    <!--Footer Links-->
 	    <!--<div class="container-fluid">
@@ -148,7 +148,7 @@
 	    <!--Copyright-->
 	    <div class="footer-copyright">
 	        <div class="container-fluid">
-	            © 2017 <a href="http://ahmethakanergun.com/">Ahmet Hakan Ergün</a>
+	            <small>© 2017 <a href="http://ahmethakanergun.com/" target="_blank">Ahmet Hakan Ergün</a></small>
 	        </div>
 	    </div>
 	    <!--/.Copyright-->

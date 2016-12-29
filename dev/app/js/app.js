@@ -137,6 +137,26 @@ $("#goldRateBox").click(function() {
 	}
 });
 
+$('#firstCurrency').change(function(){
+  	if($(this).val() == 0){
+	    $('#firstCurrencyIcon').html('<i class="fa fa-try"></i>');
+	} else if ($(this).val() == 1) {
+		$('#firstCurrencyIcon').html('<i class="fa fa-usd"></i>');
+	} else if ($(this).val() == 2) {
+		$('#firstCurrencyIcon').html('<i class="fa fa-eur"></i>');
+	}
+});
+
+$('#secondCurrency').change(function(){
+  	if($(this).val() == 0){
+	    $('#secondCurrencyIcon').html('<i class="fa fa-try"></i>');
+	} else if ($(this).val() == 1) {
+		$('#secondCurrencyIcon').html('<i class="fa fa-usd"></i>');
+	} else if ($(this).val() == 2) {
+		$('#secondCurrencyIcon').html('<i class="fa fa-eur"></i>');
+	}
+});
+
 $('button.close').click(function() {
 	window.close();
 });

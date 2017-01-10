@@ -2,7 +2,7 @@ var menubar = require('menubar')
 
 var mb = menubar({
   width: 575,
-  height: 430,
+  height: 300,
   resizable: false
 })
 

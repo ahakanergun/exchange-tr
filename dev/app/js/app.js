@@ -109,6 +109,7 @@ $("#euroToLira").keyup(function(event) {
 	$('#euroToLiraResult span').text((euro * euroRate).toFixed(2));
 });
 
+/*
 $("#dollarRateBox").click(function() {
 	if ($('.dollarConverter').css('display') == 'none') {
 		$(".dollarConverter").show();
@@ -136,6 +137,7 @@ $("#goldRateBox").click(function() {
 		$(".alDefaultBlock").show();
 	}
 });
+*/
 
 $('#firstCurrency').change(function(){
   	if($(this).val() == 0){
